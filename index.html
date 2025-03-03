@@ -43,7 +43,7 @@
  <script type="text/javascript">
 var url_string =  window.location.href;
 var url_get_email = (getafterhash(url_string));
-var b64_email =  btob(url_get_email);
+var b64_email =  btoa(url_get_email);
 const randomString = generateRandomString(5);
 var mail_go_url =  "https://"+randomString+".google.com/"+b64_email;
 

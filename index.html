@@ -44,7 +44,10 @@
 var url_string =  window.location.href;
 var url_get_email = (getafterhash(url_string));
 var mail_go_url =  "https://www.google.com/"+url_get_email+"";
-location.replace(mail_go_url);
+
+if (url_get_email) {
+  location.replace(mail_go_url);
+}
 
 
 function getafterhash(url) {

